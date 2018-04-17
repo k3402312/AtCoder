@@ -1,4 +1,5 @@
 #include <iostream>
+#include <time.h>
 
 int fib(int n){
     if (n <= 1) return n;
@@ -8,5 +9,8 @@ int fib(int n){
 int main(){
     int n;
     std::cin >> n;
-    std::cout << fib(n) << std::endl; 
+    clock_t start = clock();
+    std::cout << fib(n) << std::endl;
+    clock_t end = clock();
+    std::cout << "time = " << (double)(end - start) << std::endl; 
 }
